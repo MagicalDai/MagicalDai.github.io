@@ -18,7 +18,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2019/06/04/二极管的使用案例/电路结构.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/06/04/二极管的使用案例/电路原理.jpg">
-<meta property="og:updated_time" content="2019-06-07T09:45:57.626Z">
+<meta property="og:updated_time" content="2019-06-07T09:50:17.642Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二极管的使用案例">
 <meta name="twitter:description" content="接触公司的这款产品也有一段时间了，硬件非常简单，就是一个MCU加上几个外设，起初感觉很简单，也就没怎么关注其中的设计原理，最近领导让测一测用光电池给超级电容充电最高能冲到多高的电压，所以就对电源部分的电路认真的看了一下，这一看不要，原来这简单的电路原来还有这么复杂的考虑。">
@@ -175,9 +175,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p></p><p style="text-indent:2em padding-top:20px"><br>接触公司的这款产品也有一段时间了，硬件非常简单，就是一个MCU加上几个外设，<br>起初感觉很简单，也就没怎么关注其中的设计原理，最近领导让测一测用光电池给超级电<br>容充电最高能冲到多高的电压，所以就对电源部分的电路认真的看了一下，这一看不要，<br>原来这简单的电路原来还有这么复杂的考虑。<br></p><br><a id="more"></a><p></p>
-<p></p><p style="text-indent:2em padding-top:20px"><br>首先说一下，电源电路的结构，如下图所示<br><img src="电路结构.jpg" alt="电路结构"><br>设计思想是，在阳光充足的条件下，主要由光电池给电容充电，当阳光不足时由备用电池充电，<br>当然这二者的充电速度都非常的慢，左右就是尽量延长产品的使用寿命。<br>下面看一下具体的电路原理。<br></p><br><img src="电路原理.jpg" alt="电路原理"><br>这三个二极管使用的是相同型号的肖特基二极管，具有较低的开启电压，下面分析一下二极管的作用。<p></p>
+<p></p><p style="text-indent:2em padding-top:20px"><br>首先说一下，电源电路的结构，如下图所示<br><img src="电路结构.jpg" alt="电路结构"><br>设计思想是，在阳光充足的条件下，主要由光电池给电容充电，当阳光不足时由备用电池充电，<br>当然这二者的充电速度都非常的慢，左右就是尽量延长产品的使用寿命。<br>下面看一下具体的电路原理。<br></p><p></p>
+<p><div style="padding:10px"></div><br><img src="电路原理.jpg" alt="电路原理"><br>这三个二极管使用的是相同型号的肖特基二极管，具有较低的开启电压，下面分析一下二极管的作用。</p>
 <p></p><p style="text-indent:2em"><br>首先，二极管有一定的开启电压，当电容电压上升到一定大小后，实际上二极管流过的电流非常小，基本处于断路状态，起到一定的保护作用，防止过充。<br></p><p></p>
-<p></p><p style="text-indent:2em padding-top:20px"><br>其次，备用电池的充电回路有两个二极管，同样的电压差要被两个二极管分享，<br>也就是说电池回路一定比光电池回路率先截止充电，这样能够保证阳光充足的时候，使用光电池进行充电，尽量保存备用电池的电能。<br></p><br>在实际的测量过程中，也能发现，使用电池充电时，充电电流逐渐减小到uA级，就是因为压差的减小，导致二极管电流减小造成的。<p></p>
+<p><div style="padding:10px"></div></p>
+<p></p><p style="text-indent:2em padding-top:20px"><br>其次，备用电池的充电回路有两个二极管，同样的电压差要被两个二极管分享，<br>也就是说电池回路一定比光电池回路率先截止充电，这样能够保证阳光充足的时候，使用光电池进行充电，尽量保存备用电池的电能。<br></p><p></p>
+<p><div style="padding:10px"></div><br>在实际的测量过程中，也能发现，使用电池充电时，充电电流逐渐减小到uA级，就是因为压差的减小，导致二极管电流减小造成的。</p>
 
       
 
